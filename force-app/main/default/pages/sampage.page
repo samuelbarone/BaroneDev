@@ -1,0 +1,20 @@
+<apex:page standardController="Account" >
+   <apex:form >
+       <apex:pageBlock title="The Sam Block">
+           <apex:pageBlockSection columns="1">
+               <apex:outputField value="{!Account.Name}" />
+           </apex:pageBlockSection>
+             <apex:pageBlockSection columns="1">
+           <apex:pageBlockSectionItem >
+               <apex:outputText value="{0,date,long}">
+                   <apex:outputLabel value="Created Date"/>
+                   <apex:param value="{!Account.CreatedDate}" />
+               </apex:outputText>
+           </apex:pageBlockSectionItem>
+           <apex:repeat value="{!$ObjectType.Account.FieldSets.New_Set}" var="field">
+               <apex:inputField value="{!Account[field]}" />
+           </apex:repeat>
+             </apex:pageBlockSection>
+       </apex:pageBlock>
+   </apex:form>
+</apex:page>

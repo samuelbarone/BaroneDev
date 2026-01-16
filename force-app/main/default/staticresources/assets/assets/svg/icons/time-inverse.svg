@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="45px" height="45px" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>time-inverse</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-3" sketch:type="MSArtboardGroup" transform="translate(-964.000000, -150.000000)" fill="#FFFFFF">
+            <g id="time-inverse" sketch:type="MSLayerGroup" transform="translate(964.000000, 150.000000)">
+                <path d="M22.21875,0.28125 C10.0125,0.28125 0.1125,10.2375 0.1125,22.44375 C0.1125,34.65 10.0125,44.55 22.21875,44.55 C34.425,44.55 44.325,34.65 44.325,22.44375 C44.38125,10.2375 34.48125,0.28125 22.21875,0.28125 L22.21875,0.28125 Z M32.23125,31.78125 C31.78125,32.4 31.10625,32.7375 30.43125,32.7375 C29.98125,32.7375 29.53125,32.625 29.1375,32.34375 L20.98125,26.60625 C20.925,26.55 20.925,26.49375 20.86875,26.49375 C20.75625,26.38125 20.64375,26.26875 20.53125,26.15625 C20.41875,26.04375 20.3625,25.93125 20.30625,25.81875 C20.25,25.70625 20.19375,25.59375 20.1375,25.425 C20.08125,25.25625 20.08125,25.14375 20.025,24.975 C20.025,24.91875 19.96875,24.8625 19.96875,24.80625 L19.96875,10.74375 C19.96875,9.50625 20.98125,8.49375 22.21875,8.49375 C23.45625,8.49375 24.46875,9.50625 24.46875,10.74375 L24.46875,23.68125 L31.725,28.74375 C32.7375,29.41875 32.9625,30.76875 32.23125,31.78125 L32.23125,31.78125 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

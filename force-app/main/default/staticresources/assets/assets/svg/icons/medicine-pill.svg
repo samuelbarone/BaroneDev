@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="73px" height="45px" viewBox="0 0 73 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>medicine-pill</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-3" sketch:type="MSArtboardGroup" transform="translate(-1276.000000, -150.000000)" fill="#FFFFFF">
+            <g id="medicine-pill" sketch:type="MSLayerGroup" transform="translate(1276.000000, 150.000000)">
+                <path d="M21.1796809,27.3025532 L5.85670213,18.4567021 C1.17095745,15.7528723 -0.433723404,9.76117021 2.27010638,5.07542553 C4.97393617,0.388723404 10.9656383,-1.21595745 15.6523404,1.48882979 L30.9753191,10.3337234 L21.1796809,27.3025532 Z" id="Fill-1" sketch:type="MSShapeGroup"></path>
+                <path d="M52.5437234,27.3025532 L67.8667021,18.4567021 C72.5524468,15.7528723 74.1571277,9.76117021 71.4532979,5.07542553 C68.7456383,0.388723404 62.757766,-1.21595745 58.0710638,1.49265957 L42.7480851,10.3375532 L52.5437234,27.3025532 Z" id="Fill-2" sketch:type="MSShapeGroup"></path>
+                <path d="M32.2056383,30.9820213 C32.2056383,33.84 27.9191489,33.84 27.9191489,30.9820213 C27.9191489,28.1211702 32.2056383,28.1211702 32.2056383,30.9820213" id="Fill-3" sketch:type="MSShapeGroup"></path>
+                <path d="M37.6841489,25.5035106 C37.6841489,28.3643617 33.3947872,28.3643617 33.3947872,25.5035106 C33.3947872,22.6417021 37.6841489,22.6417021 37.6841489,25.5035106" id="Fill-4" sketch:type="MSShapeGroup"></path>
+                <path d="M47.0384043,29.7928723 C47.0384043,32.6537234 42.7480851,32.6537234 42.7480851,29.7928723 C42.7480851,26.9358511 47.0384043,26.9358511 47.0384043,29.7928723" id="Fill-5" sketch:type="MSShapeGroup"></path>
+                <path d="M33.1180851,39.5617021 C33.1180851,42.4196809 28.8315957,42.4196809 28.8315957,39.5617021 C28.8315957,36.7008511 33.1180851,36.7008511 33.1180851,39.5617021" id="Fill-6" sketch:type="MSShapeGroup"></path>
+                <path d="M26.1019149,41.7054255 C26.1019149,44.5624468 21.8115957,44.5624468 21.8115957,41.7054255 C21.8115957,38.843617 26.1019149,38.843617 26.1019149,41.7054255" id="Fill-7" sketch:type="MSShapeGroup"></path>
+                <path d="M42.7480851,35.2723404 C42.7480851,38.1293617 38.4587234,38.1293617 38.4587234,35.2723404 C38.4587234,32.4114894 42.7480851,32.4114894 42.7480851,35.2723404" id="Fill-8" sketch:type="MSShapeGroup"></path>
+                <path d="M51.3239362,42.677234 C51.3239362,45.5380851 47.0384043,45.5380851 47.0384043,42.677234 C47.0384043,39.8202128 51.3239362,39.8202128 51.3239362,42.677234" id="Fill-9" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

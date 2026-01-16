@@ -1,0 +1,18 @@
+<apex:page docType="Html-5.0" showHeader="false" sidebar="false" standardStylesheets="false">
+     
+    <apex:includeScript value="{!URLFOR($Resource.myApp,'myApp/inline.bundle.js')}"/> 
+    <apex:includeScript value="{!URLFOR($Resource.myApp,'myApp/polyfills.bundle.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.myApp,'myApp/styles.bundle.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.myApp,'myApp/vendor.bundle.js')}"/>
+    <apex:includeScript loadOnReady="true" value="{!URLFOR($Resource.myApp,'myApp/main.bundle.js')}"/> 
+      
+        <meta charset="utf-8"></meta>
+        <title>SimpleApp</title>
+        <base href="/"></base>
+ 
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <link rel="icon" type="image/x-icon" href="favicon.ico"> </link>
+          <body>
+              <app-root></app-root>
+          </body> 
+</apex:page>

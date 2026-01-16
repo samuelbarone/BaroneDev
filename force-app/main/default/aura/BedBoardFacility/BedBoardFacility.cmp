@@ -1,0 +1,147 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="BedBoardFacilityController"> 
+   <!--  <ltng:require styles="/resource/bootstrap/dist/css/bootstrap.min.css"
+                   scripts="/resource/jquery,/resource/bootstrap/dist/js/bootstrap.min.js" /> -->
+     <aura:attribute name="bedBoard" type="BedAvailability__c" />
+     <aura:attribute name="detoxFirst" type="Boolean" />
+     <aura:attribute name="day1" type="String" /> 
+     <aura:attribute name="day2" type="String" /> 
+     <aura:attribute name="day3" type="String" /> 
+     
+     <aura:handler name="init" value="{!this}" action="{!c.doInit}" /> 
+    
+    <ltng:require styles="/resource/fontawesome/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <ltng:require styles="/resource/googlefonts/googleFonts.css" />
+    <ltng:require styles="/resource/assets/css/style.css"  />
+  <!--  
+    
+    <ltng:require styles="/resource/mystyle/style.css"  /> -->
+       <!-- <ltng:require styles="https://cdn.contactaac.com/css/aac-css-0.0.9/style.css"  />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' chrome-extension: 'unsafe-inline' *.na40.visual.force.com" />
+
+    <link rel="stylesheet" href="https://cdn.contactaac.com/css/aac-css-0.0.9/style.css" /> -->
+   
+  	
+     
+  
+     <div class="bb-view sf-view">
+       <lightning:spinner aura:id="mySpinner" class="slds-hide" variant="brand" size="large" alternativeText="loading"/>
+         <div class="row m-0">
+         	<div class="col p-2">
+            <div class="au-target card bed-board tile" au-target-id="906">
+                <div class="card-header">
+                    <div class="row d-flex align-items-center" style="min-height:80px">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col col-auto pr-0 d-flex align-items-center">
+                                    <i class="au-target fa fa-aac fa-3x aac-desert_hope" au-target-id="907"></i>
+                                </div>
+                                <div class="col">
+                                    <h5 class="bold mb-1">{!v.bedBoard.FacilityName__c}</h5>
+                                    <p class="m-0">{!v.bedBoard.Location__c}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-auto">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-block stats">
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <p class="stat">Total</p>
+                                    <p class="stat">Booked</p>
+                                    <p class="stat">Occupied</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="bold">{!v.bedBoard.TotalBeds__c}</p>
+                                    <p class="bold">{!v.bedBoard.Booked__c}</p>
+                                    <p class="bold">{!v.bedBoard.UsedBeds__c}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <p class="stat">
+                                        <i class="fa"></i>&nbsp;InActive
+                                    </p>
+                                    <p class="stat">
+                                        <i class="fa fa-male"></i>&nbsp;Male
+                                    </p><p class="stat">
+                                        <i class="fa fa-female"></i>&nbsp;Female
+                                    </p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="bold">
+                                     {!v.bedBoard.InactiveBeds__c}
+                                    </p>
+                                    <aura:if isTrue="{!v.detoxFirst}">
+                                            <p class="bold">{!v.bedBoard.AvailableForUseDetoxMaleBeds__c} of {!v.bedBoard.TotalDetoxMaleBeds__c}</p>
+                                            <p class="bold">{!v.bedBoard.AvailableForUseDetoxFemaleBeds__c} of {!v.bedBoard.TotalDetoxFemaleBeds__c}</p>
+                                        <aura:set attribute="else">
+                                            <p class="bold">{!v.bedBoard.MaleBedsUsed__c} of {!v.bedBoard.MaleTotalBeds__c}</p>   
+                                            <p class="bold">{!v.bedBoard.FemaleBedsUsed__c} of {!v.bedBoard.FemaleTotalBeds__c}</p>   
+                                        </aura:set>
+                                    </aura:if> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table stats">
+                    <thead class="thead-default">
+                        <tr>
+                            <th class="stat">Day</th>
+                            <th class="stat">Leaving</th>
+                            <th class="stat">Arriving</th>
+                            <th colspan="2" class="stat">Estimated Available</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{!v.day1}</td>
+                            <td>{!v.bedBoard.Day1departures__c}</td>
+                            <td>{!v.bedBoard.Day1arrivals__c}</td>
+                            <aura:if isTrue="{!v.detoxFirst}">
+                                <td><i class="fa fa-male"></i> {!v.bedBoard.TodayAvailabilityDetoxMale__c}</td>
+                                <td><i class="fa fa-female"></i> {!v.bedBoard.TodayAvailabilityDetoxFemale__c}</td>
+                            <aura:set attribute="else">
+                                <td><i class="fa fa-male"></i> {!v.bedBoard.TodayAvailabilityMale__c}</td>
+                                <td><i class="fa fa-female"></i> {!v.bedBoard.TodayAvailabilityFemale__c}</td>
+                            </aura:set>
+                            </aura:if> 
+                        </tr>
+                        <tr>
+                            <td>{!v.day2}</td>
+                            <td>{!v.bedBoard.Day2departures__c}</td>
+                            <td>{!v.bedBoard.Day2arrivals__c}</td>
+                            <aura:if isTrue="{!v.detoxFirst}">
+                                <td><i class="fa fa-male"></i> {!v.bedBoard.TomorrowAvailabilityDetoxMale__c}</td>
+                                <td><i class="fa fa-female"></i> {!v.bedBoard.TomorrowAvailabilityDetoxFemale__c}</td>
+                            <aura:set attribute="else">
+                                <td><i class="fa fa-male"></i> {!v.bedBoard.TomorrowAvailabilityMale__c}</td>
+                                <td><i class="fa fa-female"></i> {!v.bedBoard.TomorrowAvailabilityFemale__c}</td>
+                            </aura:set>
+                            </aura:if> 
+                        </tr>
+                        <tr>
+                            <td>{!v.day3}</td>
+                            <td>{!v.bedBoard.Day3departures__c}</td>
+                            <td>{!v.bedBoard.Day3arrivals__c}</td>
+                            <aura:if isTrue="{!v.detoxFirst}">
+                                <td><i class="fa fa-male"></i> {!v.bedBoard.DayThreeAvailabilityDetoxMale__c}</td>
+                                <td><i class="fa fa-female"></i> {!v.bedBoard.DayThreeAvailabilityDetoxFemale__c}</td>
+                            <aura:set attribute="else">
+                                <td><i class="fa fa-male"></i> {!v.bedBoard.DayThreeAvailabilityMale__c}</td>
+                                <td><i class="fa fa-female"></i> {!v.bedBoard.DayThreeAvailabilityFemale__c}</td>
+                            </aura:set>
+                            </aura:if> 
+                        </tr>
+                    </tbody></table>
+             </div>
+        </div>
+         </div> 
+     </div>
+</aura:component>

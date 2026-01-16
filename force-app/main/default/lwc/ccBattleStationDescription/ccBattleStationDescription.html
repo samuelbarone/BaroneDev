@@ -1,0 +1,9 @@
+<template> 
+    <lightning-card  title="Battle Station Name" variant="narrow" icon-name="standard:opportunity">
+        &nbsp;<p>{battleStationName}</p>
+
+        <lightning-input label="Battle Station" value={battleStationName} data-field="battleStationName" onchange={handleChange} class="slds-m-bottom_x-small" required></lightning-input>
+        <lightning-button label="Update Name" variant="brand" onclick={updateName} disabled={disabled}></lightning-button>
+    
+    </lightning-card>
+</template>

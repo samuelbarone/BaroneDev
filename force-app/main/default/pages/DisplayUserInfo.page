@@ -1,0 +1,7 @@
+<apex:page >
+       {!$User.IsActive}
+       {!$User.Username} 
+      {!$User.FirstName} 
+      {!$User.LastName} 
+    
+</apex:page>

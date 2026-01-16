@@ -1,0 +1,10 @@
+<apex:page controller="AureliaSamController" showHeader="true" sidebar="false">
+   <script>
+       var GlobalSFDCVariable = {};
+       GlobalSFDCVariable.vendorBundleLocation = location.origin = '{!URLFOR($Resource.AureliaSam)}';
+       GlobalSFDCVariable.UserId = '{!$User.Id}';
+   </script>
+<div aurelia-app="main">
+    <script id="AureliaRoot" src="{!URLFOR($Resource.AureliaSam,'vendor-bundle.js')}" data-main="aurelia-bootstrapper"></script>
+</div>
+</apex:page>

@@ -1,0 +1,46 @@
+<apex:page standardController="Student__c">
+    <apex:includeScript value="/soap/ajax/38.0/connection.js"/>
+
+    <script type="text/javascript">
+        function processApplication()
+        {
+            if({!Student__c.AppliedForFinancialAid__c}) 
+            { 
+                alert('This student has already applied for financial aid'); 
+            } 
+            else 
+            { 
+                var thisStudent = new sforce.SObject('Student__c'); 
+                thisStudent.Id = '{!Student__c.Id}'; 
+                thisStudent.AppliedForFinancialAid__c = true; 
+                sforce.connection.sessionId='{!GETSESSIONID()}';
+                var result = sforce.connection.update([thisStudent]); 
+                if(!result[0].getBoolean('success')) alert('Unable to update record'); 
+                window.location.reload(); 
+                return true;
+            }
+         }
+    </script>
+
+    
+   <apex:sectionHeader title="Student Record" subtitle="{!Student__c.FirstName__c + ' ' + Student__c.LastName__c}"/>
+    <apex:form id="idMainForm">
+    
+    <apex:pageBlock id="idMainBlock" mode="maindetail" title="Student detail">
+        <apex:pageBlockButtons location="top" >
+            <apex:commandButton value="Save" action="{!Save}" />
+            <apex:commandButton value="Apply for financial aid" onclick="processApplication()" reRender="null"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection id="idStudentInfo" columns="2" title="test" collapsible="false" showHeader="false">
+            <apex:inputField id="idAge" value="{!Student__c.Age__c}"/>
+            <apex:inputField id="idGPA" value="{!Student__c.GPA__c}"/>
+            <apex:pageBlockSectionItem >
+                <apex:outputText value="Financial aid status" />
+                <apex:outputText id="idAidStatus" value="{!if(Student__c.AppliedForFinancialAid__c, 'Applied','No application on file')}" />
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+    
+    </apex:pageBlock>
+  </apex:form>    
+
+</apex:page>

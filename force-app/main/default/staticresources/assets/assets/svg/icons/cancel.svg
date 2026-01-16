@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="46px" height="45px" viewBox="0 0 46 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>cancel</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Artboard-3" sketch:type="MSArtboardGroup" transform="translate(-1234.000000, -80.000000)" fill="#FFFFFF">
+            <g id="cancel" sketch:type="MSLayerGroup" transform="translate(1234.000000, 80.000000)">
+                <path d="M45.3185,6.9815 L38.341,0.004 L22.8505,15.491 L7.364,0.004 L0.3865,6.9815 L15.874,22.469 L0.3865,37.959 L7.364,44.9365 L22.8505,29.4465 L38.341,44.9365 L45.3185,37.959 L29.828,22.469 L45.3185,6.9815 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

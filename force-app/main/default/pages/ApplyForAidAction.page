@@ -1,0 +1,64 @@
+<apex:page id="idMainPage" standardController="Student__c" extensions="StudentAidController">
+
+    <script type="text/javascript">
+    
+        var appliedForFinancialAid = {!Student__c.AppliedForFinancialAid__c};
+        
+        function processApplication()
+        {
+            if(appliedForFinancialAid) 
+            { 
+                alert('This student has already applied for financial aid'); 
+            } 
+            else 
+            { 
+                 if({!Student__c.GPA__c} < 3.9)
+                 {
+                     var prompt= window.confirm("GPA is below 3.9 - are you sure you want to apply? You probably won't get anything");
+                     var gpaElement = document.getElementById('{!$Component.idMainPage.idMainForm.idMainBlock.idStudentInfo.idGPA}');
+                     if(!prompt)
+                     {
+                         gpaElement.style.color = 'red';
+                         return;
+                     }
+                 }
+                 appliedForFinancialAid = true;
+                 Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.StudentAidController.applyForAidAction}', '{!Student__c.id}',
+                     function(result, event)
+                     {
+                         if(event.status)
+                         {
+                             window.location.reload();
+                         }
+                         else
+                         {
+                             window.alert('Unable to apply at this time');
+                         }
+                      }
+                      );
+            }
+         }
+    </script>
+
+    
+   <apex:sectionHeader title="Student Record" subtitle="{!Student__c.FirstName__c + ' ' + Student__c.LastName__c}"/>
+    <apex:form id="idMainForm">
+    
+    <apex:pageBlock id="idMainBlock" mode="maindetail" title="Student detail">
+        <apex:pageBlockButtons location="top" >
+            <apex:commandButton value="Save" action="{!Save}" />
+            <apex:commandButton value="Apply for financial aid" onclick="processApplication()" reRender="null"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection id="idStudentInfo" columns="2" title="test" collapsible="false" showHeader="false">
+            <apex:inputField id="idAge" value="{!Student__c.Age__c}"/>
+            <apex:inputField id="idGPA" value="{!Student__c.GPA__c}"/>
+            <apex:pageBlockSectionItem >
+                <apex:outputText value="Financial aid status" />
+                <apex:outputText id="idAidStatus" value="{!if(Student__c.AppliedForFinancialAid__c, 'Applied','No application on file')}" />
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+    
+    </apex:pageBlock>
+  </apex:form>    
+
+</apex:page>

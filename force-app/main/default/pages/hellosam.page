@@ -1,0 +1,10 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations</h1>
+  This is your new Page: hellosam
+  <!-- End Default Content REMOVE THIS -->
+  
+  <script type="text/javascript">
+    console.log("hello sam");
+  </script>
+</apex:page>
